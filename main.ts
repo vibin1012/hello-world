@@ -1,5 +1,5 @@
-let rps = 0
 let math = 0
+let rps = 0
 input.onButtonPressed(Button.A, function () {
     basic.showLeds(`
         # . # # #
@@ -10,22 +10,6 @@ input.onButtonPressed(Button.A, function () {
         `)
 })
 input.onGesture(Gesture.ScreenDown, function () {
-    rps = randint(1, 3)
-    if (rps == 1) {
-        basic.showString("R")
-    } else if (rps == 2) {
-        basic.showString("p")
-    } else {
-        basic.showString("S")
-    }
-})
-input.onButtonPressed(Button.AB, function () {
-    basic.showArrow(ArrowNames.North)
-})
-input.onButtonPressed(Button.B, function () {
-    basic.showString("Vibhav")
-})
-input.onGesture(Gesture.Shake, function () {
     math = randint(1, 6)
     if (math == 1) {
         basic.showString("4")
@@ -39,6 +23,22 @@ input.onGesture(Gesture.Shake, function () {
         basic.showString("6")
     } else {
         basic.showString("9")
+    }
+})
+input.onButtonPressed(Button.AB, function () {
+    basic.showArrow(ArrowNames.North)
+})
+input.onButtonPressed(Button.B, function () {
+    basic.showString("Vibhav")
+})
+input.onGesture(Gesture.Shake, function () {
+    rps = randint(1, 3)
+    if (rps == 1) {
+        basic.showString("R")
+    } else if (rps == 2) {
+        basic.showString("p")
+    } else {
+        basic.showString("S")
     }
 })
 input.onLogoEvent(TouchButtonEvent.Pressed, function () {
